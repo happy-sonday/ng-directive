@@ -1,0 +1,18 @@
+<h1>조건문 연습</h1>
+
+<!-- isSHow가 true일 경우에는 LABEL요소가 뷰에 활성화 된다
+반면 false면 else 뒤 hiding을 참조변수의 요소가 DOM으로 삽입된다. -->
+<div>
+  <button type="button" (click)="isShow = !isShow">전환</button>
+  <label *ngIf="isShow; else hiding">You are special</label>
+  <ng-template #hiding>
+    <label>I'm so depressed</label>
+  </ng-template>
+</div>
+
+<!-- member 객체가 null | undefined라면 해당 div태그와 함께 하위 요소들은 모두 DOM트리에서 제거 -->
+<div *ngIf="member.name === 'sonday'; else noData">
+  <p>Name : {{ member.name }}</p>
+  <p>Email : {{ member.email }}</p>
+</div>
+<ng-template #noData> 해당 정보가 없습니다. </ng-template>

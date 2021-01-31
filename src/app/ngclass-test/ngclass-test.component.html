@@ -1,0 +1,9 @@
+<hr />
+<h1>속성지시자-ngclass</h1>
+<!-- ts에 isMyclass의 결과값이 true일 경우 class="my-class"가 생성되어 폰트가 레드로 변경-->
+
+<div [class.my-class]="isMyClass">앵귤러 속성 지시자</div>
+
+<!-- 다중 키값을 가진 myObj의 객체는 키값이 true인 경우에만 class 속성을 반영
+따라서, test-class와 test 요소만 반영된다. -->
+<div [ngClass]="myObj">앵귤러 ngClass 속성 지시자</div>

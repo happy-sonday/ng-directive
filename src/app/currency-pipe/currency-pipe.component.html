@@ -1,0 +1,15 @@
+<div>
+  <p>A: {{ a | currency }}</p>
+
+  <p>A: {{ a | currency: "KRW" }}</p>
+
+  <p>A: {{ a | currency: "KRW":"code" }}</p>
+
+  <p>B: {{ b | currency: "KRW":"symbol":"4.2-2" }}</p>
+
+  <p>B: {{ b | currency: "KRW":"symbol-narrow":"4.2-2" }}</p>
+
+  <p>B: {{ b | currency: "USD":"symbol":"4.2-2":"en" }}</p>
+
+  <p>B: {{ b | currency: "CLP" }}</p>
+</div>

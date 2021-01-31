@@ -1,0 +1,14 @@
+<h1>boolean값에 의한 다중 조건문 연습</h1>
+<div>내가 좋아하는 야식은?</div>
+<select [(ngModel)]="food">
+  <option value="">---</option>
+  <option *ngFor="let a of foods" [value]="a">{{ a }}</option>
+</select>
+
+<span [ngSwitch]="food">
+  <span *ngSwitchCase="'chkicken'">치킨</span>
+  <span *ngSwitchCase="'pig'">삼겹살</span>
+  <span *ngSwitchCase="'cow'">스테이크</span>
+  <span *ngSwitchCase="'hamburger'">햄버거</span>
+  <span *ngSwitchDefault>없음</span>
+</span>

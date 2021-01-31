@@ -1,0 +1,7 @@
+<div>
+  <p>오늘은 {{ today | date }}</p>
+  <p>전체 date 입력은 {{ today | date: "fullDate" }}</p>
+  <p>현재 시각은 {{ today | date: "shortTime" }}</p>
+  <p>커스텀 날짜는 {{ today | date: "y년 M월 d일" }}</p>
+  <p>커스텀 시간은 {{ today | date: "h시 mm분 ss초" }}</p>
+</div>
